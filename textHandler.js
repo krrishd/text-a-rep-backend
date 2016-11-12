@@ -39,26 +39,18 @@ function handleText(req, res) {
 
   // Syntax of a text would be: "<District Number>:<Content of message>"
   
-  /*if (initialInput.contentOfText.indexOf(':') == -1) {
-    return;
-  }*/
-
   let district = Number(initialInput
     .contentOfText
     .split(':')[0]);
-
-  /*if (typeof district != Number || district == NaN) {
-    return;
-  }*/
 
   let message = initialInput
     .contentOfText.split(':')
     .splice(-1,1)
     .join();
 
-  /*if (message.length < 10) {
-    return;
-  }*/
+  console.dir(initialInput
+    .contentOfText.split(':')
+    .splice(-1,1))
 
   let relevantReps = congressData
     .findByStateAndDistrict(
