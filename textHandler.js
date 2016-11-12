@@ -51,7 +51,7 @@ function handleText(req, res) {
 
   let message = initialInput
     .contentOfText.split(':')
-    .splice(0,1)
+    .splice(-1,1)
     .join();
 
   console.log(message);
