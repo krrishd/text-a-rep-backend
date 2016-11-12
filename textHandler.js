@@ -46,6 +46,10 @@ function handleText(req, res) {
   console.log('State: ' + initialInput.stateOfSender);
   console.log('District: ' + district);
 
+  console.dir(initialInput
+    .contentOfText.split(':')
+    .splice(0,1));
+
   let message = initialInput
     .contentOfText.split(':')
     .splice(0,1)
