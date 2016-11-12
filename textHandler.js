@@ -62,6 +62,8 @@ function handleText(req, res) {
 
   let faxesSent = 0;
 
+  console.log('About to send some faxes...');
+
   relevantRepsCondensed.forEach(rep => {
     let faxableMessage = 'Dear Rep. '
       + rep.name + ',\n\n' +
@@ -78,6 +80,7 @@ function handleText(req, res) {
       string_data: faxableMessage,
       string_data_type: 'text'
     }, () => {
+      console.log('Fax sent.');
       faxesSent++;
       if (faxesSent == relevantRepsCondensed.length) {
         console.log('Faxes sent!');
@@ -87,7 +90,7 @@ function handleText(req, res) {
           body: ('Congrats! The following was just sent to your reps:\n' + faxableMessage) 
         }, (err, responseData) => {
           if (!err) {
-            
+
           }
         });
       }
