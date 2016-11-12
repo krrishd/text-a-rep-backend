@@ -64,16 +64,19 @@ function handleText(req, res) {
   let faxesSent = 0;
 
   relevantRepsCondensed.forEach(rep => {
-    let faxableMessage = 
-      '<!DOCTYPE html><html><head></head><body><p style="font-family: serif;' +
-      'font-size: 15pt;' +
-      'white-space: pre;' +
-      'padding: 10px">' +
+    let messageContent =
       'Dear Rep. '
       + rep.name + ',\n\n' +
       'The following is a message to you from ' + 
       initialInput.phoneNumberOfSender + ':\n\n' +
-      message + '</p></body></html>';
+      message;
+
+    let faxableMessage = 
+      '<!DOCTYPE html><html><head></head><body><p style="font-family: serif;' +
+      'font-size: 15pt;' +
+      'white-space: pre;' +
+      'padding: 10px">' + messageContent
+       + '</p></body></html>';
 
     let repFaxNumberSanitized = '1' + rep.fax.replace(/-/g, '');
 
