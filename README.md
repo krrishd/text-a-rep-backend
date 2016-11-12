@@ -47,3 +47,9 @@ Once you've deployed it to a server, you need to go into your Twilio phone numbe
 ```
 
 Upon doing so, your representative will be faxed your message and you'll receive confirmation via text that it happened.
+
+An example of a text for someone living in the 6th congressional district in their state:
+
+```
+6:Here's the content of my message. It can span multiple lines, paragraphs, etc, or it can be just one long text. As long as the text starts with the district number followed by a colon.
+```
