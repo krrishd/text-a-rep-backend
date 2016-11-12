@@ -66,7 +66,8 @@ function handleText(req, res) {
   relevantRepsCondensed.forEach(rep => {
     let faxableMessage = 
       '<!DOCTYPE html><html><head></head><body><p style="font-family: serif;' +
-      'font-size: 12pt' +
+      'font-size: 15pt;' +
+      'white-space: pre;' +
       'padding: 10px">' +
       'Dear Rep. '
       + rep.name + ',\n\n' +
