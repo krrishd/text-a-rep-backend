@@ -49,8 +49,7 @@ function handleText(req, res) {
     .join();
 
   console.dir(initialInput
-    .contentOfText.split(':')
-    .splice(-1,1))
+    .contentOfText.split(':'))
 
   let relevantReps = congressData
     .findByStateAndDistrict(
