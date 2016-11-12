@@ -78,7 +78,7 @@ function handleText(req, res) {
       '<p style="font-family: serif;' +
       'font-size: 12pt;' +
       'white-space: pre-line;' +
-      'padding: 10px 30px;">' + messageContent
+      'padding: 10px 45px;">' + messageContent
        + '</p><div style="width=50%; text-align:center;">' +
        '<img width="600" src="http://itskrish.co/text-your-rep/img/letterfoot.png"></div></body></html>';
 
