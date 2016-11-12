@@ -90,7 +90,7 @@ function handleText(req, res) {
         twilioClient.sendMessage({
           to: initialInput.phoneNumberOfSender,
           from: initialInput.phoneNumberOfRecipient,
-          body: ('Congrats! The following was just sent to your representative via fax:\n\n"' + faxableMessage + '"') 
+          body: ('Congrats! The following was just sent to your representative via fax:\n\n"' + messageContent + '"') 
         }, (err, responseData) => {
           if (!err) {
 
