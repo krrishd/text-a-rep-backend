@@ -39,9 +39,9 @@ function handleText(req, res) {
 
   // Syntax of a text would be: "<District Number>:<Content of message>"
 
-  let district = initialInput
+  let district = Number(initialInput
     .contentOfText
-    .split(':')[0];
+    .split(':')[0]);
 
   let message = initialInput
     .contentOfText.split(':')
