@@ -10,6 +10,8 @@ Congressional data courtesy of [@unitedstates](https://github.com/unitedstates):
 
 Made at [CalHacks III](http://calhacks.io).
 
+**Note:** The live version of this (at [itskrish.co/text-your-rep](http://itskrish.co/text-your-rep)) only uses Phaxio's test API key & secret, meaning that the faxes aren't currently being sent (even though Phaxio's corresponding callback runs); if this project receives enough interest, I'll replace the test keys with real ones (although I'd hope someone with more funds would deploy this instead OR just donate to me).
+
 ## Setup
 
 If you're trying to set this up on your own, I'd recommend a Heroku deploy. 
