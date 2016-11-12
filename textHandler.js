@@ -79,7 +79,8 @@ function handleText(req, res) {
       'font-size: 12pt;' +
       'white-space: pre-line;' +
       'padding: 10px">' + messageContent
-       + '</p><img width="600" src="http://itskrish.co/text-your-rep/img/letterfoot.png"></body></html>';
+       + '</p><div style="width=50%; text-align:center;">' +
+       '<img width="600" src="http://itskrish.co/text-your-rep/img/letterfoot.png"></div></body></html>';
 
     let repFaxNumberSanitized = '1' + rep.fax.replace(/-/g, '');
 
