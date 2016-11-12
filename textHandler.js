@@ -73,7 +73,7 @@ function handleText(req, res) {
 
     let faxableMessage = 
       '<!DOCTYPE html><html><head></head><body><p style="font-family: serif;' +
-      'font-size: 25pt;' +
+      'font-size: 21pt;' +
       'white-space: pre-line;' +
       'padding: 10px">' + messageContent
        + '</p></body></html>';
