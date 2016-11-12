@@ -51,5 +51,9 @@ Upon doing so, your representative will be faxed your message and you'll receive
 An example of a text for someone living in the 6th congressional district in their state:
 
 ```
-6:Here's the content of my message. It can span multiple lines, paragraphs, etc, or it can be just one long text. As long as the text starts with the district number followed by a colon.
+6:Here's the content of my message. 
+
+It can span multiple lines, paragraphs, etc, or it can be just one long text.
+
+As long as the text starts with the district number followed by a colon.
 ```
