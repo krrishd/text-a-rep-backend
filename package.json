@@ -1,0 +1,25 @@
+{
+  "name": "text-a-rep-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krrishd/text-a-rep-backend"
+  },
+  "author": "Krish Dholakiya <krishna.dholakiya@colorado.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/krrishd/text-a-rep-backend/issues"
+  },
+  "homepage": "https://github.com/krrishd/text-a-rep-backend",
+  "dependencies": {
+    "express": "^3.5.3",
+    "profanity-matcher": "^1.0.1",
+    "twilio": "^2.11.0",
+    "yamljs": "^0.2.8"
+  }
+}
