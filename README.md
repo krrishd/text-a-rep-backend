@@ -4,6 +4,10 @@ There's generally a lot of friction in reaching out to your representative in Co
 
 The problem lies in the fact that having to voice our input via fax is often enough to compel us to keep it to ourselves. If it were easy enough as texting our reps, knowing our message would be seen, we'd be more eager to. This tool let's you text your rep; it takes your text message, figures out who your representative is, and faxes them the message + your phone number in case they'd like to get back to you.
 
+Made at [CalHacks III](http://calhacks.io).
+
+Congressional data courtesy of @unitedstates: check out [congress-legislators](https://github.com/unitedstates/congress-legislators)
+
 ## Setup
 
 If you're trying to set this up on your own, I'd recommend a Heroku deploy. 
