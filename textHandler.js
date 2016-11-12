@@ -43,9 +43,6 @@ function handleText(req, res) {
     .contentOfText
     .split(':')[0]);
 
-  console.dir(initialInput
-    .contentOfText.split(':'));
-
   let message = initialInput
     .contentOfText.split(':')
     .splice(-1,1)
@@ -97,9 +94,3 @@ function handleText(req, res) {
 }
 
 module.exports = handleText;
-
-
-
-
-
-
