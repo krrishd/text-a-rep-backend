@@ -5,6 +5,11 @@ let app = express();
 
 let port = process.env.PORT || 8080;
 
+app.configure(() => {
+  app.use(express.bodyParser());
+  app.use(express.methodOverride());
+});
+
 app.post('/receive-text', require('./textHandler'));
 
 app.listen(port);
