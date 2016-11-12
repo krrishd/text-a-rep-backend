@@ -80,7 +80,7 @@ function handleText(req, res) {
 
     console.log('Sending fax to ' + repFaxNumberSanitized);
 
-    phaxio.sendFax({
+    phaxioClient.sendFax({
       to: repFaxNumberSanitized,
       string_data: faxableMessage,
       string_data_type: 'text'
