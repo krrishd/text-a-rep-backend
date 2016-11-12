@@ -43,9 +43,6 @@ function handleText(req, res) {
     .contentOfText
     .split(':')[0]);
 
-  console.log('State: ' + initialInput.stateOfSender);
-  console.log('District: ' + district);
-
   console.dir(initialInput
     .contentOfText.split(':'));
 
@@ -53,8 +50,6 @@ function handleText(req, res) {
     .contentOfText.split(':')
     .splice(-1,1)
     .join();
-
-  console.log(message);
 
   let relevantReps = congressData
     .findByStateAndDistrict(
@@ -70,10 +65,6 @@ function handleText(req, res) {
 
   let faxesSent = 0;
 
-  console.log('About to send some faxes...');
-
-  console.dir(relevantRepsCondensed);
-
   relevantRepsCondensed.forEach(rep => {
     let faxableMessage = 'Dear Rep. '
       + rep.name + ',\n\n' +
@@ -83,24 +74,18 @@ function handleText(req, res) {
 
     let repFaxNumberSanitized = '1' + rep.fax.replace(/-/g, '');
 
-    console.log('Sending fax to ' + repFaxNumberSanitized);
-
     phaxioClient.sendFax({
       to: repFaxNumberSanitized,
       string_data: faxableMessage,
       string_data_type: 'text'
     }, (faxErr, faxRes) => {
-      if (faxErr) {
-        console.log('Something went wrong with faxing.');
-      }
       console.log('Fax sent.');
       faxesSent++;
       if (faxesSent == relevantRepsCondensed.length) {
-        console.log('Faxes sent!');
         twilioClient.sendMessage({
           to: initialInput.phoneNumberOfSender,
           from: initialInput.phoneNumberOfRecipient,
-          body: ('Congrats! The following was just sent to your reps:\n' + faxableMessage) 
+          body: ('Congrats! The following was just sent to your reps:\n\n"' + faxableMessage + '"') 
         }, (err, responseData) => {
           if (!err) {
 
