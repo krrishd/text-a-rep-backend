@@ -14,6 +14,8 @@ Congressional data courtesy of [@unitedstates](https://github.com/unitedstates):
 
 If you're trying to set this up on your own, I'd recommend a Heroku deploy. 
 
+A [Twilio](https://twilio.com) account is required, as is a [Phaxio](http://phaxio.com) account.
+
 To run locally, you'll need to have a config.json that looks like the following:
 
 ```javascript
