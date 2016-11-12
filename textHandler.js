@@ -14,7 +14,8 @@ let client = new twilio.RestClient(accountSid, authToken);
 
 function handleText(req, res) {
   console.log('Received a text');
-  console.dir(req);
+  console.dir(req.body);
+  res.send('Cool.')
 }
 
 module.exports = handleText;
