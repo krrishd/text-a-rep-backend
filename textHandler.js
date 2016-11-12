@@ -28,6 +28,8 @@ let congressData = require('./getCongressData');
 
 function handleText(req, res) {
 
+  res.send('Got the text!');
+
   let initialInput = {
     stateOfSender: req.body.fromState,
     phoneNumberOfSender: req.body.From,
@@ -85,7 +87,7 @@ function handleText(req, res) {
           body: ('Congrats! The following was just sent to your reps:\n' + faxableMessage) 
         }, (err, responseData) => {
           if (!err) {
-            res.send('Success!');
+            
           }
         });
       }
