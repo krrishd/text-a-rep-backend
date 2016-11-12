@@ -28,6 +28,8 @@ let congressData = require('./getCongressData');
 
 function handleText(req, res) {
 
+  res.status(200).send();
+
   let initialInput = {
     stateOfSender: req.body.FromState,
     phoneNumberOfSender: req.body.From,
