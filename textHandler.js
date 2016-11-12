@@ -51,6 +51,8 @@ function handleText(req, res) {
     .splice(0,1)
     .join();
 
+  console.log(message);
+
   let relevantReps = congressData
     .findByStateAndDistrict(
       congressData.rawDataAsJSON,
