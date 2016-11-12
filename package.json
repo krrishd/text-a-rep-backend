@@ -18,6 +18,7 @@
   "homepage": "https://github.com/krrishd/text-a-rep-backend",
   "dependencies": {
     "express": "^3.5.3",
+    "phaxio": "^0.1.0",
     "profanity-matcher": "^1.0.1",
     "twilio": "^2.11.0",
     "yamljs": "^0.2.8"
