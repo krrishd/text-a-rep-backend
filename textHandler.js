@@ -31,7 +31,7 @@ function handleText(req, res) {
   res.send('Got the text!');
 
   let initialInput = {
-    stateOfSender: req.body.fromState,
+    stateOfSender: req.body.FromState,
     phoneNumberOfSender: req.body.From,
     phoneNumberOfRecipient: req.body.To,
     contentOfText: req.body.Body
