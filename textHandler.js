@@ -74,13 +74,12 @@ function handleText(req, res) {
       string_data: faxableMessage,
       string_data_type: 'text'
     }, (faxErr, faxRes) => {
-      console.log('Fax sent.');
       faxesSent++;
       if (faxesSent == relevantRepsCondensed.length) {
         twilioClient.sendMessage({
           to: initialInput.phoneNumberOfSender,
           from: initialInput.phoneNumberOfRecipient,
-          body: ('Congrats! The following was just sent to your reps:\n\n"' + faxableMessage + '"') 
+          body: ('Congrats! The following was just sent to your rep via fax:\n\n"' + faxableMessage + '"') 
         }, (err, responseData) => {
           if (!err) {
 
