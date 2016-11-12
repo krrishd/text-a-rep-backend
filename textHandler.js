@@ -66,13 +66,16 @@ function handleText(req, res) {
   relevantRepsCondensed.forEach(rep => {
     let messageContent =
       'Dear Rep. '
-      + rep.name + ',\n\n' +
+      + rep.name + ':\n\n' +
       'The following is a message to you from ' + 
       initialInput.phoneNumberOfSender + ':\n\n' +
       message;
 
     let faxableMessage = 
-      '<!DOCTYPE html><html><head></head><body><p style="font-family: serif;' +
+      '<!DOCTYPE html><html><head></head><body>' +
+      '<div style="width=100%;">' +
+      '<img style="width=100%;" src="http://itskrish.co/text-your-rep/img/letterhead.png"></div>' +
+      '<p style="font-family: serif;' +
       'font-size: 21pt;' +
       'white-space: pre-line;' +
       'padding: 10px">' + messageContent
