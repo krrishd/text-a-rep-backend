@@ -65,14 +65,14 @@ function handleText(req, res) {
 
   relevantRepsCondensed.forEach(rep => {
     let faxableMessage = 
-      '<p style="font-family: serif;' +
+      '<!DOCTYPE html><html><head></head><body><p style="font-family: serif;' +
       'font-size: 12pt' +
       'padding: 10px">' +
       'Dear Rep. '
       + rep.name + ',\n\n' +
       'The following is a message to you from ' + 
       initialInput.phoneNumberOfSender + ':\n\n' +
-      message + '</p>';
+      message + '</p></body></html>';
 
     let repFaxNumberSanitized = '1' + rep.fax.replace(/-/g, '');
 
