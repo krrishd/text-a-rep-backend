@@ -74,7 +74,7 @@ function handleText(req, res) {
     let faxableMessage = 
       '<!DOCTYPE html><html><head></head><body>' +
       '<div style="width=50%; text-align:center;">' +
-      '<img style="width=100%;" src="http://itskrish.co/text-your-rep/img/letterhead.png"></div>' +
+      '<img style="width=400px;" src="http://itskrish.co/text-your-rep/img/letterhead.png"></div>' +
       '<p style="font-family: serif;' +
       'font-size: 21pt;' +
       'white-space: pre-line;' +
