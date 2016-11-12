@@ -64,18 +64,22 @@ function handleText(req, res) {
   let faxesSent = 0;
 
   relevantRepsCondensed.forEach(rep => {
-    let faxableMessage = 'Dear Rep. '
+    let faxableMessage = 
+      '<p style="font-family: serif;' +
+      'font-size: 12pt' +
+      'padding: 10px">' +
+      'Dear Rep. '
       + rep.name + ',\n\n' +
       'The following is a message to you from ' + 
       initialInput.phoneNumberOfSender + ':\n\n' +
-      message;
+      message + '</p>';
 
     let repFaxNumberSanitized = '1' + rep.fax.replace(/-/g, '');
 
     phaxioClient.sendFax({
       to: repFaxNumberSanitized,
       string_data: faxableMessage,
-      string_data_type: 'text'
+      string_data_type: 'html'
     }, (faxErr, faxRes) => {
       faxesSent++;
       if (faxesSent == relevantRepsCondensed.length) {
