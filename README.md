@@ -6,7 +6,7 @@ The problem lies in the fact that having to voice our input via fax is often eno
 
 Made at [CalHacks III](http://calhacks.io).
 
-Congressional data courtesy of @unitedstates: check out [congress-legislators](https://github.com/unitedstates/congress-legislators)
+Congressional data courtesy of [@unitedstates](https://github.com/unitedstates): check out [congress-legislators](https://github.com/unitedstates/congress-legislators)
 
 ## Setup
 
