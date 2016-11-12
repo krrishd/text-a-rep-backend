@@ -37,7 +37,7 @@ function handleText(req, res) {
 
   // Syntax of a text would be: "<District Number>:<Content of message>"
   
-  if (contentOfText.indexOf(':') == -1) {
+  if (initialInput.contentOfText.indexOf(':') == -1) {
     return;
   }
 
