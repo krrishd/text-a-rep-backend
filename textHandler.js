@@ -36,15 +36,27 @@ function handleText(req, res) {
   };
 
   // Syntax of a text would be: "<District Number>:<Content of message>"
+  
+  if (contentOfText.indexOf(':') == -1) {
+    return;
+  }
 
   let district = Number(initialInput
     .contentOfText
     .split(':')[0]);
 
+  if (typeof district != Number || district == NaN) {
+    return;
+  }
+
   let message = initialInput
     .contentOfText.split(':')
     .splice(-1,1)
     .join();
+
+  if (message.length < 10) {
+    return;
+  }
 
   let relevantReps = congressData
     .findByStateAndDistrict(
@@ -56,7 +68,6 @@ function handleText(req, res) {
     .map(rep => {
       return congressData.getRepNameAndFaxNumber(rep);
     });
-
 
   let faxesSent = 0;
 
@@ -79,7 +90,7 @@ function handleText(req, res) {
         twilioClient.sendMessage({
           to: initialInput.phoneNumberOfSender,
           from: initialInput.phoneNumberOfRecipient,
-          body: ('Congrats! The following was just sent to your rep via fax:\n\n"' + faxableMessage + '"') 
+          body: ('Congrats! The following was just sent to your representative via fax:\n\n"' + faxableMessage + '"') 
         }, (err, responseData) => {
           if (!err) {
 
